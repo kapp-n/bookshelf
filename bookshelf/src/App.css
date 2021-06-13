@@ -76,3 +76,10 @@ hr{
   border-color: #493835;
 }
 
+.button{
+  border-radius: 5px;
+  border-style: outset;
+  border-color: #493835;
+  background: #523f3b;
+  color: gold;
+}

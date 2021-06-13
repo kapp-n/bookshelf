@@ -22,7 +22,7 @@ const allShelves = shelves.map(shelf => <Shelf key={shelf.id} shelves={shelf} />
 
 
     return (
-        <div>
+        <div className="library">
             <h1>Your Library</h1>
             <hr />
             <br />

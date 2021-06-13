@@ -5,7 +5,7 @@ const Books = ( {books} ) => {
 
     return (
         <div>
-            <Link to={`/shelves/${books.id}`}>
+            <Link to={`/book/${books.id}`}>
             <img className="image" src={books.image} />
             </Link>
         </div>

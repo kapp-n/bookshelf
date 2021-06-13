@@ -6,7 +6,8 @@ const link = {
     padding: '12px',
     margin: '0 6px 6x',
     textDecoration: 'none',
-    color: 'pink'
+    color: 'gold',
+	background: '#523f3b'
 }
 
 
@@ -18,7 +19,7 @@ const Nav = () => {
 				exact
 				style={link}
 				activeStyle={{
-					background: 'white'
+					background: '#493835'
 				}}
 			>Home</NavLink>
 
@@ -27,7 +28,7 @@ const Nav = () => {
 				exact
 				style={link}
 				activeStyle={{
-					background: 'white'
+					background: '#493835'
 				}}
 			>Library</NavLink>
         </div>

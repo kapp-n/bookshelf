@@ -1,5 +1,19 @@
+
 .App {
   text-align: center;
+  color: gold;
+  font-family: cursive;
+  height: 1000px;
+  background-color: #523f3b;
+}
+
+hr{
+  border-color: #493835;
+}
+
+.Nav{
+  width: 15px;
+  font-family: cursive;
 }
 
 .image {
@@ -7,6 +21,16 @@
   height: 300px;
   float: left;
   padding: 5px
+}
+
+.library {
+  background: #523f3b;
+  color: gold;
+  font-family: cursive;
+}
+
+.library hr{
+  border-color: #493835;
 }
 
 .shelves {
@@ -26,5 +50,29 @@
   margin-bottom: 25;
   margin-top: 0px;
 
+}
+
+.book{
+  background: #523f3b;
+  font-family: cursive;
+  color:gold;
+}
+
+.book img{
+  height: 300px;
+  width: 200px;
+  border-style: inset;
+  border-color: #493835;
+  border-width: thick;
+}
+
+.book h4{
+  width: 500px;
+  padding-left: 460px;
+  font-size: 16px;
+}
+
+.book hr{
+  border-color: #493835;
 }
 

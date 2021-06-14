@@ -30,12 +30,25 @@ const Shelves = () => {
         })
         const newShelves = shelves.filter(s => s.id != id)
         setShelves(newShelves)
-        console.log(shelves)
-        
+        console.log(shelves) 
     }
 
-    const allShelves = shelves.map(shelf => <Shelf key={shelf.id} shelves={shelf} deleteShelf={deleteTheShelf} />)
 
+    const addBook = (book) => {
+        fetch('http://localhost:9292/shelves', {
+            method: 'POST',
+            headers: {
+                'Content-type' : 'application/json'
+            },
+            body: JSON.stringify(book)
+        })
+        .then(r => r.json())
+        .then(data => {
+            console.log(data)
+            const newShelves = data
+            setShelves(newShelves)
+        })
+    }
 
     const addShelf = (genre) => {
         console.log(genre)
@@ -54,8 +67,8 @@ const Shelves = () => {
         setShelfFormFlag(false)
     }
 
-
-
+    
+    const allShelves = shelves.map(shelf => <Shelf key={shelf.id} shelves={shelf} deleteShelf={deleteTheShelf} addBook={addBook} />)
 
     return (
         <div className="library">

@@ -18,9 +18,10 @@ hr{
 
 .image {
   width: 200px;
-  height: 300px;
+  height: 270px;
   float: left;
-  padding: 5px
+  padding: 5px;
+  
 }
 
 .library {
@@ -41,9 +42,9 @@ hr{
 }
 
 .shelf-title{
-  padding: none;
+  padding-bottom: 10px;
   height: 10px;
-  width: 1400px;
+  width: 1430px;
   color: gold;
   font-family: cursive;
   font-size: 30px;
@@ -82,4 +83,37 @@ hr{
   border-color: #493835;
   background: #523f3b;
   color: gold;
+  height: 23px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.form{
+  opacity: 80%;
+  padding-right: 100px;
+  width: 300px;
+}
+
+#summary{
+  padding: 30px;
+}
+
+#pages{
+  width: 30px
+}
+
+#name{
+  width: 150px;
+}
+
+#author{
+  width: 100px
+}
+
+#imageurl{
+  width: 100px
 }

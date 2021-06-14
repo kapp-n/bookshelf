@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 
 const Book = (props) => {
@@ -15,6 +16,18 @@ const Book = (props) => {
         })
     }, [])
 
+    const handleDelete = () => {
+        fetch(`http://localhost:9292/book/${props.match.params.id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-type' : 'application/json'
+            },
+            body: JSON.stringify(book.id)
+        })
+        setBook([])
+    }
+        
+
 
     return (
         <div className="book">
@@ -24,6 +37,10 @@ const Book = (props) => {
             <hr />
             <h4>{book.summary}</h4>
             <h5>Page Count: {book.pages}</h5>
+            <br />
+            <Link to={'/shelves'}>
+            <button className="button" onClick={handleDelete}>Delete Book</button>
+            </Link>
         </div>
     )
 }

@@ -3,7 +3,7 @@ import Books from './Books'
 import BookForm from './BookForm'
 
 
-const Shelf = ({shelves, deleteShelf, addBook}) => {
+const Shelf = ({shelves, deleteShelf, addBook, deleteBook}) => {
     const [bookFormFlag, setBookFormFlag] = useState(false)
 
 
@@ -16,7 +16,8 @@ const Shelf = ({shelves, deleteShelf, addBook}) => {
     }
 
 
-    const shelf = shelves.books.map(s => <Books key={s.id} books={s} />)
+
+    const shelf = shelves.books.map(b => <Books key={b.id} books={b} deleteBook={deleteBook} />)
     
     return (
         <div className="shelves">

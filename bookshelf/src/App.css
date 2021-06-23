@@ -36,7 +36,7 @@ hr{
 
 .shelves {
   background: #523f3b;
-  height: 350px;
+  height: 410px;
   border-style: inset;
   border-color: #493835;
 }
@@ -99,7 +99,7 @@ hr{
 }
 
 #summary{
-  padding: 30px;
+  height: 50px;
 }
 
 #pages{
@@ -117,3 +117,15 @@ hr{
 #imageurl{
   width: 100px
 }
+
+#button{
+  border-radius: 5px;
+  border-style: outset;
+  border-color: #493835;
+  background: #523f3b;
+  color: gold;
+  height: 23px;
+  float: left;
+}
+
+

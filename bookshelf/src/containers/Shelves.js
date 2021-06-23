@@ -67,8 +67,23 @@ const Shelves = () => {
         setShelfFormFlag(false)
     }
 
+    const deleteBook = (b) => {
+        fetch(`http://localhost:9292/book/${b.id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-type' : 'application/json'
+            },
+            body: JSON.stringify(b.id)
+        })
+        .then(r => r.json())
+        .then(data =>{
+            setShelves(data)
+        })
+    }
     
-    const allShelves = shelves.map(shelf => <Shelf key={shelf.id} shelves={shelf} deleteShelf={deleteTheShelf} addBook={addBook} />)
+
+    
+    const allShelves = shelves.map(shelf => <Shelf key={shelf.id} shelves={shelf} deleteShelf={deleteTheShelf} addBook={addBook} deleteBook={deleteBook} />)
 
     return (
         <div className="library">
